@@ -1,0 +1,14 @@
+schema: '2.0'
+stages:
+  train:
+    cmd: python src/train.py
+    params:
+      params.yaml:
+        train.batch_size: 32
+        train.epochs: 10
+        train.learning_rate: 0.02
+    outs:
+    - path: metrics.json
+      hash: md5
+      md5: f25baca3744ef8b5e555a7a74b990799
+      size: 60

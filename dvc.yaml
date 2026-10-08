@@ -1,0 +1,9 @@
+stages:
+  train:
+    cmd: python src/train.py
+    params:
+      - train.learning_rate
+      - train.epochs
+      - train.batch_size
+    metrics:
+      - metrics.json
